@@ -37,3 +37,11 @@ The project focuses on practicing modern React concepts such as hooks, side effe
 ### Install dependencies
 ```bash
 npm install
+```
+### Run development server
+```bash
+npm run dev
+```
+### The app will run at:
+```bash
+http://localhost:5173
