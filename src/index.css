@@ -290,6 +290,7 @@ body {
   padding: var(--spacing-sm) 0;
   overflow-y: auto;
   overflow-x: hidden;
+  max-height: 57rem;
 }
 
 .list-watched {
@@ -468,4 +469,80 @@ body {
   padding: var(--spacing-xs) var(--spacing-md);
   margin-top: var(--spacing-md);
   color: var(--color-primary-light);
+}
+
+/* Empty State Styles */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 400px;
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.empty-state h3 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-text);
+}
+
+.empty-state p {
+  font-size: 1.4rem;
+  color: var(--color-text-dark);
+  margin-bottom: 2.5rem;
+}
+
+.suggestions {
+  width: 100%;
+  max-width: 500px;
+}
+
+.suggestions-label {
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.suggestion-chip {
+  background: var(--color-background-500);
+  border: 2px solid var(--color-primary);
+  color: var(--color-text);
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.suggestion-chip:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
