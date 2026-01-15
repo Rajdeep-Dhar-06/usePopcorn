@@ -44,7 +44,7 @@ function App() {
       async function fetchMovies() {
         try {
           setIsLoading(true);
-          setError(""); // Good practice to reset error here
+          setError("");
 
           const res = await fetch(
             `http://www.omdbapi.com/?apikey=700b461a&s=${query}`,
